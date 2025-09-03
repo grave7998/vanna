@@ -222,7 +222,7 @@ class ZhipuAI_Chat(VannaBase):
 
         client = ZhipuAI(api_key=self.api_key)
         response = client.chat.completions.create(
-            model="glm-4",
+            model=self.model,
             max_tokens=max_tokens,
             temperature=temperature,
             top_p=top_p,
